@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Activity 2
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .breeds {
+                display: flex;
+            }
+            .breed-container {
+                padding: 20px;
+                border: 1px solid black;
+            }
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            ul {
+                list-style-type: none;
+                text-align: center;
+                margin: 0auto;
+                padding: 0px;
+                display: flex;
+            }
+            ul li {
+                padding-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Used tags:
+            1. <img src="" alt="">
+            2. <div> - block element; used as a container for other HTML elements
+            3. <meta> - creates a responsive website
+            4. <header> - defines a header for a document
+            5. <nav> - defines a set of navigation links
+            6. <section> - defines a section in a document
+            7. <footer> - defines a footer for the document
+            8. <form>
+            9. <label>
+            10. <input>
+        -->
+
+        <header>
+            <h1>Cute Cat Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h1>Different Cat Breeds</h1>
+            <div class="breeds">
+                <div class="breed-container">
+                    <h2>Abyssinian Cat</h2>
+                    <img src="Abyssinian_body_7.jpg" alt="Abyssinian Cat Breed" width="300px">
+                    <p>
+                        <b>Size: </b>Small to medium, with males weighing 7 to 10 pounds and females weighing 6 to 8 pounds<br>
+                        <b>Coat: </b>Medium<br>
+                        <b>Color: </b>Ruddy, red, blue, fawn
+                    </p>
+                </div>
+                <div class="breed-container">
+                    <h2>American Bobtail Cat Breed</h2>
+                    <img src="AmericanBobtail_body_6.jpg" alt="American Bobtail Cat Breed" width="300 px">
+                    <p>
+                        <b>Size: </b>Medium to Large<br>
+                        <b>Coat: </b>Short, Medium, Long<br>
+                        <b>Color: </b>White, black, blue, red, cream, chocolate, lavender, cinnamon, fawn, plus various patterns and shadings
+                    </p>
+                </div>
+                <div class="breed-container">
+                    <h2>American Curl Cat Breed</h2>
+                    <img src="AmericanCurlSHA_body_6.jpg" alt="American Curl Cat Breed" width="300 px">
+                    <p>
+                        <b>Size: </b>Small to medium<br>
+                        <b>Coat: </b>Short, Semi-long<br>
+                        <b>Color: </b>White, black, blue, red, cream, chocolate, lilac, silver, golden, plus various patterns and shadings
+                    </p>
+                </div>
+                <div class="breed-container">
+                    <h2>American Shorthair Cat</h2>
+                    <img src="AmericanShorthair_body_6.jpg" alt="American Shorthair Cat" width="300 px">
+                    <p>
+                        <b>Size: </b>Medium to large, with males weighing 11 to 15 pounds and females weighing 8 to 12 pounds<br>
+                        <b>Coat: </b>Short<br>
+                        <b>Color: </b>White, black, blue, red, cream and silver, plus various patterns and shadings
+                    </p>
+                </div>
+            </div>
+
+            <center><p><a href="https://www.purina.com/cats/cat-breeds">Click here to view more cat breeds</a></p></center>
+        </section>
+
+        <hr>
+
+        <footer>
+            <h2>Adopt now!</h2>
+            <form action="/action_page.php">
+                <label for="fname">Full Name:</label><br>
+                <input type="text" id="fname" name="name" value="Name"><br>
+                <label for="contact_number">Contact Number:</label><br>
+                <input type="text" id="number" name="number" value="#########"><br><br>
+                <input type="submit" value="Submit">
+            </form> 
+        </footer>
+
+    </body>
+</html>
