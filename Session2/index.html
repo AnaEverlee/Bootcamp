@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        1. Attributes
+            Provides additional information about elements.
+            Usually comes in name-value pair.
+            Located inside the opening tag of an html tag.
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Session 2</title>
+    </head>
+    <body>
+        <h1>Session 2</h1>
+        <p>
+            <!--
+                2. <abbr></abbr>
+                    Defines an abbreviation or an acronym
+                    Use title attribute to show the expanded form of the abbreviation/acronym
+                    Inline element
+                -->
+            The <abbr title="World Wide Web Consortium">W3C</abbr> was founded on October 1st, 1994.
+        </p>
+        <section>
+            <h2>Attributes for &lt;td&gt; and &lt;th&gt;</h2>
+            <table style="border: 1px solid black">
+                <caption>
+                    Employees
+                </caption>
+                <thead style="border: 1px solid black">
+                    <tr style="border: 1px solid black">
+                        <th style="border: 1px solid black">Name</th>
+                        <th style="border: 1px solid black">Role</th>
+                        <th style="border: 1px solid black">Age</th>
+                    </tr>
+                </thead>
+                <!--
+                    3. rowspan
+                        Specifies the number of rows you want the cell to span
+                        Possible values: any positive integer
+                -->
+                <tbody>
+                    <tr style="border: 1px solid black">
+                        <td style="border: 1px solid black">Tim Berners-Lee</td>
+                        <td style="border: 1px solid black" rowspan="2">Full Stack Developer</td>
+                        <td style="border: 1px solid black">70</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr style="border: 1px solid black">
+                        <td style="border: 1px solid black">Alan Turing</td>
+                        <td style="border: 1px solid black">42</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <!--
+                        4. colspan
+                            Specifies the number of columns you want the cell to span
+                            Possible values: positive integer
+                    -->
+                    <tr style="border: 1px solid black">
+                        <td style="border: 1px solid black" colspan="2">Larry Page</td>
+                        <td style="border: 1px solid black">57</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Attributes for &lt;ol&gt;</h2>
+            <p>Technology we are going to study in chronological order:</p>
+            <!--
+                7. type
+                    Specifies the kind of marker to use in the lists: 1, A, a, i, I
+                8. reversed
+                    Specifies that the list order should be reversed
+                9. start
+                    Specifies the start value of an ordered list
+            -->
+            <ol type="I" start="5" reversed>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>NoSQL</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Image</h2>
+            <!--
+                15. <figure>
+                    Specifies self-contained content, like photos
+                    Block Element
+            -->
+            <figure>
+                <!--
+                    10. img
+                        used to embed an image
+                    11. src
+                        specifies the url or relative path to the image
+                    12. height
+                        specifies the height of the image
+                    13. width
+                        specifies the width of the image
+                    14. alt
+                        specifies alternate text for the image if the image does not load
+                -->
+                <img 
+                    src="cute_cat.jpg" 
+                    alt="Cute Cat" 
+                    height="300" 
+                    width="500"
+                />
+                <!--
+                    16. <a>
+                        Defines a hyperlink, which is used to link from one page to another
+                    17. href 
+                        Indicates the link's destination
+                    18. target
+                        Specifies where to open the link document
+                -->
+                <figcaption>
+                    Cute <a href="https://www.clubcatusa.com/about/blog/" target="_blank">Cat</a>
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Form</h2>
+            <!--
+                20. <form>
+                    Creates a form for user input.
+                    Contains one or more of the following form elements:
+                        input, textarea, button, select, option, optgroup, fieldset, label, and output
+                    Block Element
+            -->
+            <form action="index2.html">
+                <!--
+                    22. <label>
+                        defines a label for elements inside a form
+                        inline element
+                    23. for
+                        Specifies which form element a label is bound to
+                -->
+                <label for="name">Name</label>
+                <!--
+                    21. <input>
+                        specifies an input field where the user can enter data
+                        displayed in several ways, depending on the value of type attribute
+                        it can be: text, email, number, password, radio, or checkbox
+                        inline element
+                -->
+                <input type="text" placeholder="Name" id="name">
+                <br />
+                <label for="age">Age</label>
+                <input type="number" placeholder="70" id="age" min="18" max="75">
+                <br />
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="youremail@gmail.com" id="email">
+                <br />
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <!--
+                    22. <fieldset>
+                        Used to group related elements in a form
+                        Draws a box around the related elements
+                        block element
+                -->
+                <fieldset>
+                    <!-- 
+                        23. <legend>
+                            Defines a caption or title for the <fieldset> element
+                            block element
+                    -->
+                    <legend>Type of Developer</legend>
+                    <input type="radio" name="dev-type" id="front-end" />
+                    <label for="front-end">Frontend Web Developer</label>
+                    <br />
+                    <input type="radio" name="dev-type" id="back-end" />
+                    <label for="back-end">Backend Web Developer</label>
+                    <br />
+                    <input type="radio" name="dev-type" id="full-stack" />
+                    <label for="full-stack">Full Stack Developer</label>
+                </fieldset>
+                <!--
+                    24. <textarea>
+                        defines a multiline text input control
+                        block element
+                    25. cols
+                        specifies the width of the textarea
+                    26. rows
+                        specifies the height of the textarea
+                -->
+                <textarea cols="50" rows="7">Comment</textarea>
+                <br />
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Non-binary</option>
+                </select>
+                <input type="submit" value="submit">
+                <!--
+                    <button type="submit">Submit</button>
+                -->
+            </form>
+        </section>
+    </body>
+</html>
