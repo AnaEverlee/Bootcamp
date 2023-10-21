@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins&display=swap');
+
+:root {
+    --beige: #F7EDE2;
+    --yellow: #F6BD60;
+    --light-pink: #F5CAC3;
+    --blue: #84A59D;
+    --hot-pink: #F28482;
+    --gray: #F1F1F1;
+}
+
+
+* {
+    margin: 20px;
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: relative;
+    top: -50px;
+    width: 140px;
+    height: 140px;
+    left: -10px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--beige);
+    height: 85px;
+}
+
+.about {
+    /* all: unset; */
+    background: none;
+    cursor: pointer;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.about:hover {
+    color:blueviolet;
+}
+
+nav {
+    position: relative;
+    max-width: 40%;
+    top: -75px;
+    font-size: 14px;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav li a:hover {
+    color: var(--hot-pink);
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu ul {
+    position: absolute;
+    top: 85%;
+    left: -20px;
+    background-color: var(--beige);
+    padding: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > button, .dropdown > button:hover {
+    color:var(--hot-pink);
+}
+
+.dropdown.active > .about + .dropdown-menu ul {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* button */
+.cta-btn {
+    position: relative;
+    width: 150px;
+    top: -17px;
+    background-color: var(--hot-pink);
+    color: var(--beige);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--blue);
+    z-index: -1; /* manipulates how elements are stacked on top of another */
+    border-radius: 8px;
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0); /* animation will occur on the x-axis */
+    transform-origin: left; /* animation will start from left to right*/
+}
+
+.cta-btn:hover::before,
+.cta-btn:focus::before {
+    transform: scaleX(1);
+}
+
+.self-portrait {
+    height: 450px;
+}
+
+.greet {
+    font-family: 'Parisienne', cursive;
+    font-size: 38px;
+    position: relative;
+    left: -20px;
+    z-index: -1; /*so it does not overlap the dropdown menu*/
+}
+
+main h1 {
+    font-size: 28px;
+    justify-content: center;
+    line-height: 50px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.main-description p {
+    max-width: 500px;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+#education {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.educ-table caption {
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.educ-table {
+    border-collapse: collapse;
+    /* ensures that there is no space between cell borders */
+    border-radius: 5px 5px 0 0;
+    margin: 0 auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 750px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.educ-table thead tr {
+    background-color: var(--hot-pink);
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.educ-table th,
+.educ-table td {
+    padding: 12px 15px;
+}
+
+.educ-table tbody:nth-of-type(even) {
+    background-color: var(--beige);
+}
+
+.educ-table tbody:last-child {
+    border-bottom: 2px solid var(--hot-pink);
+}
+
+.educ-table tbody tr {
+    border-bottom: 1px solid var(--light-pink);
+}
+
+.flower-one {
+    height: 100px;
+    position: absolute;
+    top: 900px;
+    left: 10px;
+}
+
+.flower-two {
+    height: 100px;
+    position: absolute;
+    top: 900px;
+    left: 950px;
+}
+
+#skills {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: var(--light-pink);
+}
+
+#skills h2 {
+    font-size: 28px;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-card {
+    width: 320px;
+    height: 350px;
+    padding: 20px 15px;
+    border-radius: 20px;
+    background-color: var(--beige);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card p {
+    text-align: center;
+}
+
+#works {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#works h2 {
+    font-size: 28px;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+}
+
+#works p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+iframe {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width:100%;
+    height: 500px;
+    position: relative;
+    right: 17px;
+}
+
+#testimonials h2 {
+    font-size: 28px;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+}
+
+.testimonials-container {
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.testimonial-text {
+    background-color: var(--hot-pink);
+    border-radius: 20px;
+    color: white;
+    height: 450px;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.user-text {
+    width: 80%;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 55%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.quote-icon {
+    fill: var(--beige);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.user-text span {
+    display: block;
+    font-size: 14px;
+    margin-top: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+.testimonial-pic {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-pic {
+    width: 70px;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.user-text.active-text {
+    display: block;
+    animation: moveup 0.5s linear forwards;
+}
+
+.user-pic.active-pic {
+    transform: scale(1.2);
+    border: 3px solid var(--light-pink);
+    transition: transform 300ms ease-in-out;
+}
+
+@keyframes moveup {
+    0% {
+        margin-top: 25px;
+    }
+    
+    100% {
+        margin-top: 0;
+    }
+}
+
+footer {
+    background-color: var(--beige);
+    padding: 25px;
+    display: flex;
+    align-items:start;
+    justify-content: space-between;
+}
+
+footer h2 {
+    font-size: 28px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.footer-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.socmed-container a {
+    text-decoration: none;
+}
+
+.socmed-container {
+    position: relative;
+    left: 85px;
+    top: -20px;
+}
+
+.socmed-icon {
+    width: 1.8em;
+    padding: 0;
+    margin: 0;
+    fill: var(--hot-pink);
+}
+
+.socmed-icon:hover {
+    fill: var(--blue);
+    transition: 300ms ease-in-out;
+}
+
+form {
+    width: 50%;
+}
+
+.submit-btn {
+    position: relative;
+    width: 150px;
+    background-color: var(--hot-pink);
+    color: var(--beige);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: .5em 1em;
+    border-radius: 8px;
+}
+
+.submit-btn:hover {
+    background-color: var(--blue);
+    transition: 300ms ease-in-out;
+}
+
+.arrow {
+    position: absolute;
+    height: 80px;
+    top: 4660px;
+    fill: var(--hot-pink);
+}
