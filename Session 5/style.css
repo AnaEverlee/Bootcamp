@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito&display=swap');
+
+* {
+    box-sizing: border-box;
+    position: static;
+    margin: 0;
+}
+
+:root {
+    --heading-font: 'DM Serif Display', serif;
+    --normal-font: 'Nunito', sans-serif;
+}
+
+header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: white;
+    padding: 10px 25px;
+    box-shadow: 0 1px 10px #708090;
+}
+
+.website-name {
+    font-size: 32px;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    font-family: var(--normal-font);
+    display: flex;
+    gap: 3em;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: gray;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav a::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 30px;
+
+    display: block;
+    position: absolute;
+    top: 41px;
+
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+nav a:hover::after {
+    opacity: 1;
+}
+
+main {
+    margin-top: 57px;
+    height: fit-content;
+}
+
+.whitespace {
+    width: 100%;
+    height: 600px;
+}
+
+.carousel {
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel__image {
+    width: 100%;
+}
+
+.carousel__track-container {
+    background: lightgreen;
+    height: 100%;
+    position: relative;
+}
+
+.carousel__track {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    transition: transform 650ms ease-in-out;
+}
+
+.carousel__slide {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(500%);
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #fff5;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;   
+}
+
+.carousel__button--left {
+    left: 20px;
+}
+
+.carousel__button--right {
+    right: 20px;
+}
+
+h1 {
+    width: 100%;
+    padding: 30px 190px;
+    position: sticky;
+    top: 50px;
+    background-color: white;
+
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+section {
+    padding-top: 50px;
+}
+
+.tops-selection-container,
+.bottoms-selection-container,
+.dresses-selection-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+}
+
+.tops-section,
+.bottoms-section,
+.dresses-section {
+   padding-left: 0 30px;
+}
+
+.clothing-card {
+    width: 348px;
+    height: 540px;
+    border: 1px solid black;
+}
+
+.clothing-image {
+    width: 100%;
+    height: auto;
+}
+
+.clothing-description {
+    margin: 10px;
+    font-family: var(--normal-font);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.3em;
+}
+
+.item-price {
+    font-weight: bold;
+}
+
+footer {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--normal-font);
+    font-size: 18px;
+    opacity: 0.7;
+}

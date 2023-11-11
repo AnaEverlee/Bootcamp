@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CIDER</title>
+</head>
+<body>
+    <header>
+        <span class="website-name">Cider</span>
+        <nav>
+            <li><a href="#">All</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Bestsellers</a>
+            <li><a href="#tops-section">Tops</a></li>
+            <li><a href="#bottoms-section">Bottoms</a></li>
+            <li><a href="#dresses-section">Dresses</a></li>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <!-- prev button -->
+            <button class="carousel__button carousel__button--left"><</button>
+            <div class="carousel__track-container">
+                <!-- lists are typically used for carousels to help with accessibility -->
+                <ul class="carousel__track">
+                    <li class="carousel__slide current-slide">
+                        <img class="carousel__image" src="img/featured-image.jpeg" alt="carousel-image">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image" src="img/featured-image-2.jpeg" alt="carousel-image">
+                    </li>
+                </ul>
+            </div>
+            <!-- next button -->
+            <button class="carousel__button carousel__button--right">></button>
+        </div>
+    </main>
+
+    <div class="whitespace"></div>
+
+    <section id="tops-section" class="tops-section">
+        <h1>Tops</h1>
+        <div class="tops-selection-container">
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/top1.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">V-neck Button Flower Cardigan</p>
+                    <p class="item-price">Php 1,800</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/top2.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">V-neck Long Sleeve Tee</p>
+                    <p class="item-price">Php 650</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/top3.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Green High Neck Sweater</p>
+                    <p class="item-price">Php 1,926</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/top4.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Solid High Neck Knit Vest</p>
+                    <p class="item-price">Php 600</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/top5.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Flower Knitted Sweater</p>
+                    <p class="item-price">Php 1,700</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/top6.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Duck Pattern Cardigan</p>
+                    <p class="item-price">Php 1,700</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section id="bottoms-section" class="bottoms-section">
+        <h1>Bottoms</h1>
+        <div class="bottoms-selection-container">
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/bottom1.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">V-neck Button Flower Cardigan</p>
+                    <p class="item-price">Php 1,800</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/bottom2.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">V-neck Long Sleeve Tee</p>
+                    <p class="item-price">Php 650</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/bottom3.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Green High Neck Sweater</p>
+                    <p class="item-price">Php 1,926</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/bottom4.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Solid High Neck Knit Vest</p>
+                    <p class="item-price">Php 600</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/bottom5.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Flower Knitted Sweater</p>
+                    <p class="item-price">Php 1,700</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/bottom6.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Duck Pattern Cardigan</p>
+                    <p class="item-price">Php 1,700</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dresses-section" class="dresses-section">
+        <h1>Dresses</h1>
+        <div class="dresses-selection-container">
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/dress1.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">V-neck Button Flower Cardigan</p>
+                    <p class="item-price">Php 1,800</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/dress2.jpeg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">V-neck Long Sleeve Tee</p>
+                    <p class="item-price">Php 650</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/dress3.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Green High Neck Sweater</p>
+                    <p class="item-price">Php 1,926</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/dress4.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Solid High Neck Knit Vest</p>
+                    <p class="item-price">Php 600</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/dress5.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Flower Knitted Sweater</p>
+                    <p class="item-price">Php 1,700</p>
+                </div>
+            </div>
+            <div class="clothing-card">
+                <img class="clothing-image" src="img/dress6.jpg" alt="">
+                <div class="clothing-description">
+                    <p class="item-name">Duck Pattern Cardigan</p>
+                    <p class="item-price">Php 1,700</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <small>&copy; 2023 Cider All Rights Reserved</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
