@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Concert+One&family=Mansalva&family=Marmelad&family=Rammetto+One&family=Vidaloka&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* font-family */
+    --heading-font: 'Concert One', sans-serif;
+    --body-font: 'Belleza', sans-serif;
+
+    /* font-sizes */
+    --heading-size: 38px;
+    --body-size: 20px;
+
+    /* colors */
+    --light-pink: #f9e6ea;
+    --light-green: #b6c9b6;
+    --yellow: #e5d486;
+    --lavendar: #c3c4e1;
+    --orange-pink: #fdbfb0;
+}
+
+/* mobile devices */
+@media screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p, button {
+        font-size: 12px;
+    }
+
+    .main-img-container {
+        height: 200px;
+        width: 200px;
+    }
+
+    main {
+        height: 100vh; /* covers the entire viewport size */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .main-content {
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .flower-icon {
+        width: 10px;
+    }
+
+    .header-content {
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--lavendar);
+    }
+
+    .header-content h1 {
+        font-family: var(--body-font);
+        font-size: 8px;
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    .header-nav > * {
+        width: fit-content;
+    }
+
+    .header-nav {
+        height: fit-content;
+        padding: 15px 0;
+        background-color: white;
+
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+
+    .header-nav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .about-section {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        background-color: var(--light-pink);
+    }
+
+    .about-section img {
+        width: 150px;
+        border-radius: 80px;
+        border: 1px solid var(--light-pink);
+    }
+
+    .about-section p {
+        line-height: 18px;
+    }
+
+    .interests-container {
+        padding: 20px;
+    }
+
+    .interests-container h2 {
+        font-size: 18px;
+        color: black;
+        text-shadow: 2px 2px var(--lavendar);
+    }
+
+    .interests-container h1 {
+        text-align: center;
+    }
+
+    .interest-card {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        margin: 20px 0 0 0;
+    }
+
+    .interest-card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .interest-card-content p {
+        text-align: center;
+    }
+   
+    .interest-card img {
+        width: 230px;
+        border-radius: 25px;
+    }
+
+}
+
+/* tablets */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p, button {
+        font-size: 12px;
+    }
+    
+    .main-img-container {
+        height: 200px;
+        width: 200px;
+    }
+
+    .main-content {
+        line-height: 40px;
+    }
+
+    main {
+        height: 100vh; /* covers the entire viewport size */
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .flower-icon {
+        width: 15px;
+    }
+    
+    .header-content {
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--lavendar);
+    }
+
+    .header-content h1 {
+        font-family: var(--body-font);
+        font-size: 12px;
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    .header-nav > * {
+        width: fit-content;
+    }
+
+    .header-nav {
+        height: 200px;
+        padding: 15px 0;
+        background-color: white;
+
+        display: flex;
+        gap: 1em;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .header-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+    }
+
+    .header-nav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .about-section {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        background-color: var(--light-pink);
+    }
+
+    .about-section img {
+        width: 150px;
+        border-radius: 80px;
+        border: 1px solid var(--light-pink);
+    }
+
+    .about-section p {
+        line-height: 22px;
+        font-size: 12px;
+    }
+
+    
+    .interests-container {
+        padding: 20px;
+    }
+
+    .interests-container h2 {
+        font-size: 18px;
+        color: black;
+        text-shadow: 2px 2px var(--lavendar);
+    }
+
+    .interests-container h1 {
+        text-align: center;
+    }
+
+    .interest-card {
+        height: auto;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin: 20px 0 0 0;
+    }
+
+    .interest-card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+   
+    .interest-card img {
+        width: 230px;
+        border-radius: 25px;
+    }
+
+} 
+
+
+main {
+    background-color: var(--light-pink);
+}
+
+.main-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+}
+ 
+p {
+    font-family: var(--body-font);
+}
+
+button {
+    width: calc(5px + object-fit);
+    padding: 7px 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+
+    background-color: var(--light-green);
+    font-family: var(--body-font);
+}
+
+.hero-section a {
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    background-color: var(--lavendar);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.nav-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--lavendar);
+}
+
+.item-one, .item-two, .item-three {
+    transform: scale(1);
+}
+
+.item-one:hover, .item-two:hover, .item-three:hover {
+    transform: scale(1.1);
+    transition: transform 250ms ease;
+}
+
+.main-content h1 span {
+    display: inline-block;
+    transform: scale(1);
+    transition: transform 150ms ease-in-out;
+    cursor: default;
+}
+
+.main-content h1 span:hover {
+    transform: scale(1.2);
+}
+
+.goals-section {
+    padding: 20px;
+    background-color: var(--lavendar);
+}
+
+.goals-section h1 {
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
+.goals-section ul {
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.goals-section li {
+    list-style-type: none;
+}
+
+.flower-bullet {
+    width: 10px;
+    margin-right: 5px;
+}
