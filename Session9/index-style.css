@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lilita+One&display=swap');
+
+:root {
+    --misty-rose: #F3DAD8;
+    --tea-rose: #F4C3C2;
+    --orchid-pink: #F1B5CB;
+    --dark-purple: #7B506F;
+}
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.navbar .navbar-brand {
+    font-family: "Lilita One", sans-serif;
+    color: var(--dark-purple);
+    font-size: 32px;
+}
+
+.container-fluid {
+    min-height: 31.2vh;
+}
+
+.first-col, .third-col {
+    background-color: var(--misty-rose);
+}
+
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+.small-text, p {
+    font-size: 18px;
+}
+
+.large-text, h2 {
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.lesson-content {
+    line-height: 40px;
+}
+
+.dropdown-menu {
+    min-width: 120px;
+}
+
+.footer {
+    gap: 5em;
+}
+
+@media (max-width: 768px) {
+    .table-of-contents {
+    border-bottom: 1px solid lightgray;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
+.nav-link, .navbar-brand {
+    color: var(--dark-purple) !important;
+}
+
+.nav-link:hover, .dropdown-item:hover, .navbar-brand:hover {
+    color: var(--orchid-pink) !important;
+}
+
+.btn {
+    border-color: var(--dark-purple);
+    background-color: white;
+    color: var(--dark-purple);
+}
+
+.btn:hover {
+    border-color: var(--dark-purple);
+    background-color: var(--dark-purple);
+    color: white;
+}
+
+.card-header {
+    font-family: 'Lilita One', sans-serif;
+    background-color: var(--dark-purple);
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.first-col {
+    border-bottom: 1px solid var(--dark-purple);
+}
+
+.card, .list-group-item {
+    border: 1px solid var(--dark-purple);
+}
+
+.third-col {
+    border-top: 1px solid var(--dark-purple);
+}
